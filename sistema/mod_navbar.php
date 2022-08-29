@@ -15,6 +15,13 @@
       <span class="sr-only">(current)</span></a>
    </li>
 
+   
+
+
+</ul>
+
+<ul class="navbar-nav ml-auto">
+
    <li class="nav-item nav-item-cliente">
        <a class="nav-link" href="itemInteresado.php">
          Interesados
@@ -27,12 +34,11 @@
        <span class="sr-only">(current)</span></a>
    </li>
 
-
-</ul>
-
-<ul class="navbar-nav ml-auto">
-
-
+   <li class="nav-item nav-item-usuarios">
+       <a class="nav-link" href="escanearQr.php">
+         Escanear QR
+       <span class="sr-only">(current)</span></a>
+   </li>
 
 <li class="nav-item px-4 dropdown">
       <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -57,20 +57,21 @@
        <section>
           <div class="jumbotron jumbotron-fluid">
               <div class="container">
-                  <h1 class="display-4">Datos del Interesado</h1>
+                  <h1 class="display-4">Escanear QR</h1>
                   <hr>
                   <p class="lead">Estos datos son totalmente confidenciales.</p>
+                  <form>
                   <div class="row">
                       <div class="col-xs-12 col-sm-12 col-md-9">
-
-                      <form>
-                      <textarea id="target-input"></textarea>
-<input type="button" id="openreader-btn" value="Scan QRCode"/>
-                      </form>    
-                          
-
+                         <textarea id="target-input" style="display:none;"></textarea>
                       </div>
                   </div>
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-9">
+                         <input class="btn btn-success" type="button" id="openreader-btn" value="Scan QRCode"/>
+                      </div>
+                  </div>
+                  </form>  
               </div>
           </div>
         </section>

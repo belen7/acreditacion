@@ -91,7 +91,7 @@
   multiple: true,
   skipDuplicates: false,
   callback: function(codes) {
-      //console.log(codes[0]);
+      console.log(codes[0]);
       window.location.href = codes[0];
 
   }

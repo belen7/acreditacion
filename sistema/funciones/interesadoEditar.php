@@ -13,10 +13,10 @@ $id = ( isset($_POST['id']) )?SanitizeVars::INT($_POST['id']):false;
 $apellido = isset($_POST['apellido'])?SanitizeVars::APELLIDONOMBRES($_POST['apellido'],2,50):false;
 $nombres = isset($_POST['nombres'])?SanitizeVars::APELLIDONOMBRES($_POST['nombres'],2,50):false;
 $dni = isset($_POST['dni'])?SanitizeVars::NUMEROS($_POST['dni'],8,8):false;
-$domicilio = isset($_POST['domicilio'])?SanitizeVars::DOMICILIO($_POST['domicilio'],50):false;
+$domicilio = isset($_POST['direccion'])?SanitizeVars::DOMICILIO($_POST['direccion'],50):false;
 $telefono = isset($_POST['telefono'])?SanitizeVars::STRING($_POST['telefono'],6,15):false;
 $email = isset($_POST['email'])?SanitizeVars::EMAIL($_POST['email']):false;
-$localidad = isset($_POST['localidad'])?SanitizeVars::INT($_POST['localidad']):false;
+$localidad = isset($_POST['localidad_id'])?SanitizeVars::INT($_POST['localidad_id']):false;
 
 
 //die($_POST['dni'].'-'.$id.'-'.$apellido.'-'.$nombres.'-'.$dni.'-'.$domicilio.'-'.$telefono.'-'.$email.'-'.$localidad);

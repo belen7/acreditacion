@@ -39,9 +39,13 @@ function entidadCrear(){
       
       $.get(url,function(data) {
             $("#resultado").slideDown("slow").html(data);
+            $("#inputAltaFechaNacimniento").datepicker({
+                dateFormat: 'dd/mm/yy',
+                //startDate: '-3d'
+            });
             $('#inputAltaLocalidad').select2({
                     theme: "bootstrap",
-                    placeholder: "Buscar",
+                    placeholder: "Buscar Localidad",
                     ajax: {
                         url: url_select2_obtener,
                         dataType: 'json',
@@ -75,8 +79,9 @@ function entidadCrear(){
     let email = $("#inputAltaEmail").val();
     let localidad = $("#inputAltaLocalidad").val();
     let foto = $("#inputAltaNombreFoto").val();
+    let fecha_nacimiento = $("#inputAltaFechaNacimniento").val();
     
-    let parametros = {"apellido":apellido,"nombres":nombres,"dni":dni,"domicilio":domicilio,"telefono":telefono,"email":email,"localidad":localidad,"foto":foto};
+    let parametros = {"apellido":apellido,"nombres":nombres,"dni":dni,"domicilio":domicilio,"telefono":telefono,"email":email,"localidad":localidad,"foto":foto,"fecha_nacimiento":fecha_nacimiento};
     //console.info(parametros);
     
     let url = "funciones/"+entidad_nombre+"Crear.php";

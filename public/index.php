@@ -25,26 +25,6 @@
           opacity: 0.5;
       }
 
-      label.cameraButton {
-  display: inline-block;
-  margin: 1em 0;
-
-  /* Styles to make it look like a button */
-  padding: 0.5em;
-  border: 2px solid #666;
-  border-color: #EEE #CCC #CCC #EEE;
-  background-color: #DDD;
-}
-
-/* Look like a clicked/depressed button */
-label.cameraButton:active {
-  border-color: #CCC #EEE #EEE #CCC;
-}
-
-/* This is the part that actually hides the 'Choose file' text box for camera inputs */
-label.cameraButton input[accept*="camera"] {
-  display: none;
-}
 
   </style>
   
@@ -61,7 +41,7 @@ label.cameraButton input[accept*="camera"] {
       <nav aria-label="breadcrumb" role="navigation">
           <ol class="breadcrumb">
               <li class="breadcrumb-item" aria-current="page"><a href="home.php">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Registrame</li>
+              <li class="breadcrumb-item active" aria-current="page">Interesados</li>
           </ol>
       </nav>
     </div>
@@ -159,13 +139,9 @@ label.cameraButton input[accept*="camera"] {
             data: formData,
             contentType: false,
             processData: false,
-            beforeSend: function() {
-                  // setting a timeout
-                  $(".rounded").attr("src", '../assets/img/load_icon.gif').width('300px');
-            },
             success: function(response) {
                 if (response != 0) {
-                    $(".rounded").attr("src", '../fotos/'+response);
+                    $(".rounded").attr("src", './images/'+response);
                     $('#inputAltaNombreFoto').val(response);
                 } else {
                     alert('Formato de imagen incorrecto.');

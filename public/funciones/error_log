@@ -1,0 +1,7 @@
+[27-Aug-2022 23:47:22 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, string given in /home2/uiakkdaq/public_html/acreditacion/conexion/conexion.php on line 61
+[27-Aug-2022 23:47:22 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home2/uiakkdaq/public_html/acreditacion/conexion/conexion.php on line 38
+[27-Aug-2022 23:47:22 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home2/uiakkdaq/public_html/acreditacion/conexion/conexion.php on line 39
+[27-Aug-2022 23:47:22 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home2/uiakkdaq/public_html/acreditacion/conexion/conexion.php on line 52
+[27-Aug-2022 23:47:22 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home2/uiakkdaq/public_html/acreditacion/conexion/conexion.php on line 53
+[28-Aug-2022 00:39:20 UTC] PHP Warning:  imagepng(../qr/qrInteresado0.png): failed to open stream: No such file or directory in /home2/uiakkdaq/public_html/acreditacion/lib/phpqrcode/qrimage.php on line 43
+[28-Aug-2022 00:41:09 UTC] PHP Warning:  imagepng(./qr/qrInteresado0.png): failed to open stream: No such file or directory in /home2/uiakkdaq/public_html/acreditacion/lib/phpqrcode/qrimage.php on line 43

@@ -36,11 +36,11 @@ $id =  isset($_POST['id'])?SanitizeVars::INT($_POST['id']):false;
 $apellido = isset($_POST['apellido'])?SanitizeVars::APELLIDONOMBRES($_POST['apellido']):false;
 $nombres = isset($_POST['nombres'])?SanitizeVars::APELLIDONOMBRES($_POST['nombres']):false;
 $dni = isset($_POST['dni'])?SanitizeVars::NUMEROS($_POST['dni'],8,8):false;
-$domicilio = isset($_POST['domicilio'])?SanitizeVars::STRING_NORMAL($_POST['domicilio']):false;
+$domicilio = isset($_POST['direccion'])?SanitizeVars::STRING_NORMAL($_POST['direccion']):false;
 $telefono = isset($_POST['telefono'])?$_POST['telefono']:false;
 $email = isset($_POST['email'])?SanitizeVars::STRING_NORMAL($_POST['email']):false;
-$localidad = isset($_POST['localidad'])?SanitizeVars::APELLIDONOMBRES($_POST['localidad']):false;
-$provincia = isset($_POST['provincia'])?SanitizeVars::APELLIDONOMBRES($_POST['provincia']):false;
+$localidad = isset($_POST['localidad_id'])?SanitizeVars::APELLIDONOMBRES($_POST['localidad_id']):false;
+$provincia = isset($_POST['provincia_id'])?SanitizeVars::APELLIDONOMBRES($_POST['provincia_id']):false;
 
 //die($action.'-'.$busqueda.'-'.$id.'-'.$usuario.'-'.$rol.'-'.$email);
 
@@ -115,7 +115,7 @@ if($action == 'listar'){
 	//*********************************************************** */
 	//****************  PONER LOS NOMBRES DE LOS CAMPOS ********* */
 	//*********************************************************** */
-	$campo1 = "Id";$campo2 = "Apellido"; $campo3 = "Nombres"; $campo4 = "Dni"; $campo5 = "Domicilio"; $campo6 = "Telefono"; $campo7 = "Email"; $campo8 = "Localidad"; $campo9 = "Provincia";
+	$campo1 = "Id";$campo2 = "Apellido"; $campo3 = "Nombres"; $campo4 = "Dni"; $campo5 = "Direccion"; $campo6 = "Telefono"; $campo7 = "Email"; $campo8 = "Localidad_id"; $campo9 = "Provincia_id";
 	//*********************************************************** */
 	//*********************************************************** */
 	
@@ -196,10 +196,6 @@ if($action == 'listar'){
 						$rowCampo8 = $row['interesado_localidad'];
 						$rowCampo9 = $row['interesado_provincia'];
 
-						//$accion_editar = '<a href="#" onclick="calendarioEditar('.$rowId.')" ><img src="../assets/img/icons/edit_icon.png" width="23"></a>';
-						//$accion_eliminar = '<a href="#" onclick="calendarioEliminar('.$rowId.')" ><img src="../assets/img/icons/delete_icon.png" width="20"></a>';
-						
-						/*$hash = ArrayHash::encode(array($secreto=>$rowId));*/
 						echo '<tr>';
 						echo '   <td align="center"><small><b><input type="checkbox" class="check" id="check_'.$rowIdCampo1.' " name="check_usu[]" value="'.$rowIdCampo1.'"></b></small></td>'.
 							 '   <td align="center" colspan="3">

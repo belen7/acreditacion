@@ -1,6 +1,5 @@
 <?php 
 $dni = base64_decode($_GET['q']);
-echo "dfdsfsdf".$dni;
 
 ?>
 <!doctype html>
@@ -93,7 +92,7 @@ echo "dfdsfsdf".$dni;
           console.info(response.datos[0]);
 
           html = `<div class="container" >
-                    <img class="img-thumbnail img-fluid rounded-circle" src="../fotos/`+response.datos[0].foto+`" alt="" width="150"> 
+                    <img class="img-thumbnail img-fluid " src="../fotos/`+response.datos[0].foto+`" alt="" width="120"> 
                   </div>
                   <hr>
                   <p><strong>Apellido: </strong> `+response.datos[0].apellido+`, `+response.datos[0].nombres+ `
@@ -102,6 +101,7 @@ echo "dfdsfsdf".$dni;
                   <p><strong>Celular:      </strong> `+response.datos[0].telefono+`
                   <p><strong>Localidad: </strong> `+response.datos[0].localidad_nombre+`, `+response.datos[0].provincia_nombre+`
                   <p><strong>Email: </strong>  `+response.datos[0].email+`
+                  <p><strong>Abonó: </strong>  `+response.datos[0].pago+`
                   <hr>
                   <p><button class="btn btn-primary btn-block" onclick="confirmarAsistencia()">Confirmar</button>`;
           $("#resultado").html(html);

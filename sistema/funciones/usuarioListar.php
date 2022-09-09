@@ -9,6 +9,9 @@ include_once 'pagination.php';
 
 //die(unserialize('a:1:{i:0;s:8:"empleado";}')[0]);
 
+$rol = 'admin';
+$rol_class = ($rol=='admin')?'':'disabledbutton';
+
 /**********************************************************************************************************************************************************************/
 /**************************************************************** RECIBIR PARAMETROS Y SANITIZARLOS *******************************************************************/
 /**********************************************************************************************************************************************************************/
@@ -171,9 +174,18 @@ if($action == 'listar'){
 						/*$hash = ArrayHash::encode(array($secreto=>$rowId));*/
 						echo '<tr>';
 						echo '   <td align="center"><small><b><input type="checkbox" class="check" id="check_'.$rowIdCampo1.' " name="check_usu[]" value="'.$rowIdCampo1.'"></b></small></td>'.
-							 '   <td align="center"><small><a href="#" class="disabledbutton" title="Ver"><img src="../assets/img/icons/file_view_icon.png" width="17"></a></small></td>'.
-							 '   <td align="center"><small><a href="#" title="Modificar"><img src="../assets/img/icons/file_edit_icon.png" onclick="entidadEditar('.$rowIdCampo1.')" width="21" height="21"></a></small></td>'.
-							 '   <td align="center"><small><a href="#" class="btn-eliminar" title="Eliminar" data-toggle="modal" data-target="#confirmarModal" data-id="'.$rowIdCampo1.'" ><img src="../assets/img/icons/file_delete_icon.png" width="16"></a></small></td>'.	
+							 '   <td align="center" colspan="3">
+										<div class="btn-group pull-right" role="group">
+											<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Acciones
+											</button>
+											<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+												<a class="dropdown-item small" href="#"><i class="fa fa-address-card-o"></i>&nbsp;Ver</a>
+												<a class="'.$rol_class.' dropdown-item small" href="#" onclick="entidadEditar('.$rowIdCampo1.')"><i class="fa fa-edit"></i>&nbsp;Editar</a>
+												<a class="'.$rol_class.' dropdown-item small" href="#" data-toggle="modal" data-target="#confirmarModal" data-id="'.$rowIdCampo1.'"><i class="fa fa-trash"></i>&nbsp;Borrar</a>
+											</div>
+										</div>
+								</td>'.	
 							 '   <td align="center"><small>'.$rowIdCampo1.'</small></td>'.
 							 '   <td align="left"><small>'.$rowCampo2.'<small></td>'.
 							 '   <td align="left"><small>'.$rowCampo3.'</small></td>'.

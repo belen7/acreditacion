@@ -10,7 +10,7 @@
  <ul class="navbar-nav">
 
    <li class="nav-item nav-item-home">
-    <a class="nav-link" href="home.php">
+    <a class="nav-link" href="./index.php">
       <img src="../assets/img/icons/home_icon.png" width="23">
       <span class="sr-only">(current)</span></a>
    </li>
